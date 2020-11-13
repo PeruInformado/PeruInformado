@@ -90,7 +90,7 @@
 
 <script>
   let request = new XMLHttpRequest();
-  request.open("GET","https://raw.githubusercontent.com/PeruInformado/PeruInformado/main/data/investigaciones.json",true);
+  request.open("GET","https://raw.githubusercontent.com/PeruInformado/PeruInformado/main/data/Investigaciones.json",true);
   request.send();
   let text = ""
   console.log("2**************")
@@ -115,7 +115,7 @@
           table_str += '<tbody>';
       $.each(text, function(Numero, Datos){
           //table_str +='<tr><td>'+Datos.Nombre+'</td><td>'+Datos.Partido+'</td><td>'+Datos.Delitos+'</td><td>'+Datos.Región+'</td></tr>';
-          table_str +='<tr><td>'+Datos.Nombre+'</td><td>'+Datos.Partido+'</td><td>'+Datos.Región+'</td><td>'+Datos.Delitos+'</td></tr><tr><td><tr><td><tr><td><tr><td>';
+          table_str +='<tr><td>'+Datos.NOMBRES+'</td><td>'+Datos.BANCADA+'</td><td>'+Datos.REGION+'</td><td>'+Datos.DELITO+'</td></tr><tr><td><tr><td><tr><td><tr><td>';
       });
       $("#textarea").html(table_str);
       console.log(table_str);
