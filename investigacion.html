@@ -90,7 +90,7 @@
 
 <script>
   let request = new XMLHttpRequest();
-  request.open("GET","https://raw.githubusercontent.com/FrankFacundo/NoMasCorrupcion/main/data/investigaciones.json",true);
+  request.open("GET","https://raw.githubusercontent.com/PeruInformado/PeruInformado/main/data/investigaciones.json",true);
   request.send();
   let text = ""
   console.log("2**************")
@@ -106,14 +106,14 @@
       }
       console.log("6**************")
       console.log(typeof text)
-      console.log(text.Hoja1)
+      console.log(text)
       //document.getElementById("textarea").textContent = text.Hoja1
       //document.getElementById("textarea").textContent = JSON.stringify(text.Hoja1, undefined, 2);
       //console.log(text.Hoja1[1].Nombre)
 
-      var table_str = '<table><thead><tr><th>Nombre</th><th>Partido</th><th>Region</th><th>Delitos</th></tr></thead>';
+      var table_str = '<table><thead><tr><th>Nombre</th><th>Bancada</th><th>Region</th><th>Investigación</th></tr></thead>';
           table_str += '<tbody>';
-      $.each(text.Hoja1, function(Numero, Datos){
+      $.each(text, function(Numero, Datos){
           //table_str +='<tr><td>'+Datos.Nombre+'</td><td>'+Datos.Partido+'</td><td>'+Datos.Delitos+'</td><td>'+Datos.Región+'</td></tr>';
           table_str +='<tr><td>'+Datos.Nombre+'</td><td>'+Datos.Partido+'</td><td>'+Datos.Región+'</td><td>'+Datos.Delitos+'</td></tr><tr><td><tr><td><tr><td><tr><td>';
       });
